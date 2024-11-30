@@ -13,13 +13,16 @@ A ReactJS project that allows you to generate images from text using AI. This pr
 ## Contributors
 
 ### 1. **Riswan Nopiyar**
-![Riswan Nopiyar](https://avatars.githubusercontent.com/u/103617674?v=4)
+<img src="https://avatars.githubusercontent.com/u/103617674?v=4" alt="Riswan Nopiyar" width="100" height="100" style="border-radius: 10px;">
+
 *GitHub Profile*: [Riswan Nopiyar](https://github.com/Riswan-Nopiyar)
 
 ### 2. **Kingnish**
-![Kingnish](https://avatars.githubusercontent.com/u/167524748?v=4)
+<img src="https://avatars.githubusercontent.com/u/167524748?v=4" alt="Kingnish" width="100" height="100" style="border-radius: 10px;">
+
 *GitHub Profile*: [Kingnish](https://github.com/kingnish24)
 
 ### 3. **Stability AI**
-![Stability AI](https://avatars.githubusercontent.com/u/100950301?s=200&v=4)
+<img src="https://avatars.githubusercontent.com/u/100950301?s=200&v=4" alt="Stability AI" width="100" height="100" style="border-radius: 10px;">
+
 *GitHub Profile*: [Stability AI](https://github.com/Stability-AI)
