@@ -4,8 +4,6 @@ A ReactJS project that allows you to generate images from text using AI. This pr
 
 ![thumbnail](https://github.com/user-attachments/assets/9aa4f62f-6a58-4bac-9689-5a7322bc9b07)
 
-![thumbnail-2](https://github.com/user-attachments/assets/dbc08a1b-d718-42c6-847b-79722fd1934b)
-
 ![thumbnail-3](https://github.com/user-attachments/assets/0c819e0a-16f1-4bdc-877d-ceb610481db5)
 
 ![thumbnail-4](https://github.com/user-attachments/assets/5a9fad94-2442-47b2-8d26-26eecd064948)
