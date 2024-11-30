@@ -24,7 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG",
+  "homepage": "https://riswan-nopiyar.github.io/Ai-Text-To-Image-Reactjs-HG/",
   "eslintConfig": {
     "extends": [
       "react-app",
