@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+.svelte-1k4ye9u h1 {
+  color: transparent !important; /* Membuat teks transparan */
+  background-image: linear-gradient(to right, #8b5cf6, #3b82f6) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  font-family: "Inter", sans-serif !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 9999px !important;
+  display: inline-block !important;
+  box-shadow: 0 2px 4px rgba(73, 73, 73, 0.5) !important;
+  text-align: center !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.svelte-1k4ye9u h1::before {
+  content: "⚡" !important;
+  font-size: 2rem !important;
+  color: #fbbf24 !important;
+  margin-right: 0.5rem;
+  display: inline-block !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.embed-container.svelte-182fdeq.svelte-182fdeq {
+  border: none !important;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1e1e1e, #4a4a4a);
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slow-spin-left {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg); /* Ubah arah rotasi ke kiri (negatif) */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.animate-spin-slow-left {
+  animation: slow-spin-left 700ms linear infinite;
+}
+
+.animate-marquee {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  white-space: nowrap; /* Prevent wrapping */
+  animation: marquee 20s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes marquee {
+  0% {
+      transform: translateX(100%); /* Mulai dari luar layar kanan */
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      transform: translateX(-100%); /* Berhenti di luar layar kiri */
   }
 }
