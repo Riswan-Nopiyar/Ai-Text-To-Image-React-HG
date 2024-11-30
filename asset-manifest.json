@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/css/main.3ecaca98.css",
-    "main.js": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/js/main.e7b3e641.js",
-    "static/js/453.32bc1a42.chunk.js": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/js/453.32bc1a42.chunk.js",
-    "index.html": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/index.html",
-    "main.3ecaca98.css.map": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/css/main.3ecaca98.css.map",
-    "main.e7b3e641.js.map": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/js/main.e7b3e641.js.map",
-    "453.32bc1a42.chunk.js.map": "/Riswan-Nopiyar/Ai-Text-To-Image-Reactjs-HG/static/js/453.32bc1a42.chunk.js.map"
+    "main.css": "/Ai-Text-To-Image-Reactjs-HG/static/css/main.3ecaca98.css",
+    "main.js": "/Ai-Text-To-Image-Reactjs-HG/static/js/main.eb101d09.js",
+    "static/js/453.32bc1a42.chunk.js": "/Ai-Text-To-Image-Reactjs-HG/static/js/453.32bc1a42.chunk.js",
+    "index.html": "/Ai-Text-To-Image-Reactjs-HG/index.html",
+    "main.3ecaca98.css.map": "/Ai-Text-To-Image-Reactjs-HG/static/css/main.3ecaca98.css.map",
+    "main.eb101d09.js.map": "/Ai-Text-To-Image-Reactjs-HG/static/js/main.eb101d09.js.map",
+    "453.32bc1a42.chunk.js.map": "/Ai-Text-To-Image-Reactjs-HG/static/js/453.32bc1a42.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ecaca98.css",
-    "static/js/main.e7b3e641.js"
+    "static/js/main.eb101d09.js"
   ]
 }
