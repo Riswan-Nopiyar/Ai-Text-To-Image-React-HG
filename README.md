@@ -1,4 +1,4 @@
-# Ai-Text-To-Image-Reactjs-HG
+# Image Generator AI
 
 A ReactJS project that allows you to generate images from text using AI. This project integrates an AI model for text-to-image functionality, designed to be easily deployed and used in web applications.
 <br>
