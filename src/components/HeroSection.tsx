@@ -1,5 +1,3 @@
-import React from 'react';
-
 const HeroSection = () => {
   // Handle scroll to 'Services' section
   const scrollToServices = () => {

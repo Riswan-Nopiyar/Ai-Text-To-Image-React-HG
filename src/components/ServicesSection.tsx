@@ -1,40 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import CONFIG from '../config';
 
 const ServicesSection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate waiting for 4 seconds to show the spinner
     const timer = setTimeout(() => {
-      setIsLoading(false); // Hide the spinner after 4 seconds
+      setIsLoading(false);
     }, 4000);
 
-    // Load the Gradio script dynamically
     const script = document.createElement('script');
-    script.src = "https://gradio.s3-us-west-2.amazonaws.com/4.26.0/gradio.js";
+    script.src = CONFIG.gradioScriptSrc;
     script.type = "module";
     script.onload = () => {
-      // Ensure the script is loaded, but still wait 4 seconds before hiding the spinner
     };
     document.body.appendChild(script);
-
-    // Cleanup the timer and script when the component unmounts
     return () => {
-      clearTimeout(timer); // Clean up the timeout if the component is unmounted before the timer finishes
-      document.body.removeChild(script); // Clean up the script
+      clearTimeout(timer); 
+      document.body.removeChild(script);
     };
   }, []);
 
   useEffect(() => {
-    // Once loading is complete, set the opacity to 1 for #gradio-container
     if (!isLoading) {
       const gradioContainer = document.getElementById("gradio-container");
       if (gradioContainer) {
-        gradioContainer.style.transition = "opacity 1s ease-in-out"; // Smooth transition
-        gradioContainer.style.opacity = "1"; // Make the container visible after 4 seconds
+        gradioContainer.style.transition = "opacity 1s ease-in-out"; 
+        gradioContainer.style.opacity = "1"; 
       }
     }
-  }, [isLoading]); // Trigger the effect when `isLoading` changes
+  }, [isLoading]);
 
   return (
     <>
@@ -91,11 +86,11 @@ const ServicesSection = () => {
           >
             <script
               type="module"
-              src="https://gradio.s3-us-west-2.amazonaws.com/4.26.0/gradio.js"
+              src={CONFIG.gradioScriptSrc}
             ></script>
             <gradio-app
               id="gradio-app"
-              src="https://kingnish-sdxl-flash.hf.space"
+              src={CONFIG.gradioAppLink}
               className="w-full h-auto rounded-lg"
             ></gradio-app>
           </div>
@@ -103,7 +98,7 @@ const ServicesSection = () => {
           {/* Call to Action Button */}
           <div className="mt-6">
             <a
-              href="https://www.nopiyar.my.id/search/label/Ai"
+              href={CONFIG.moreAiLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center py-3 px-7 text-white font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 shadow-lg hover:bg-purple-700 dark:bg-gradient-to-r dark:from-purple-700 dark:to-blue-700 dark:hover:bg-purple-800"

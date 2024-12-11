@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -25,11 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -44,7 +40,10 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full transition-all duration-300 ${isScrolled ? 'bg-white dark:bg-[rgb(11,15,25)] shadow-lg' : 'bg-transparent dark:bg-transparent shadow-none'}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-gray-800 dark:text-white">
+        <a href="#home"
+          className="text-2xl font-bold text-gray-800 dark:text-white"
+          aria-label="Go to homepage"
+        >
           AI Tool
         </a>
 
@@ -54,6 +53,7 @@ const Navbar = () => {
             <a
               href="#home"
               className="text-gray-800 hover:text-purple-500 dark:text-white dark:hover:text-purple-400 transition"
+              aria-label="Go to Home section"
             >
               Home
             </a>
@@ -61,26 +61,32 @@ const Navbar = () => {
           <li>
             <a
               href="https://www.nopiyar.my.id/p/riswan-nopiyar.html"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="text-gray-800 hover:text-purple-500 dark:text-white dark:hover:text-purple-400 transition"
+              aria-label="Go to About page"
             >
               About
             </a>
           </li>
           <li>
             <a
-              href="#Services"
+              href="#services"
               className="text-gray-800 hover:text-purple-500 dark:text-white dark:hover:text-purple-400 transition"
+              aria-label="Go to Services section"
             >
               Services
             </a>
           </li>
         </ul>
 
-        {/* Dark/Light Mode Toggle and Mobile Menu Button */}
+        {/* Theme Toggle and Mobile Menu Button */}
         <div className="flex items-center space-x-4">
           {/* Theme Toggle Button */}
-          <button onClick={toggleTheme} className="text-gray-800 dark:text-white">
+          <button 
+            onClick={toggleTheme} 
+            className="text-gray-800 dark:text-white"
+            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+          >
             {/* Sun Icon (Light Mode) */}
             <svg
               id="sun-icon"
@@ -89,6 +95,7 @@ const Navbar = () => {
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -106,6 +113,7 @@ const Navbar = () => {
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -121,6 +129,9 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             id="mobile-menu-toggle"
             className="text-gray-800 dark:text-white md:hidden"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label="Toggle mobile menu"
           >
             <svg
               className="w-6 h-6"
@@ -128,6 +139,7 @@ const Navbar = () => {
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -147,21 +159,24 @@ const Navbar = () => {
           className="md:hidden bg-white dark:bg-[rgb(11,15,25)] text-gray-800 dark:text-white py-4 px-6 space-y-4"
         >
           <a
-            href="#Home"
+            href="#home"
             className="block hover:text-purple-500 dark:hover:text-purple-400 transition"
+            aria-label="Go to Home section"
           >
             Home
           </a>
           <a
             href="https://www.nopiyar.my.id/p/riswan-nopiyar.html"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             className="block hover:text-purple-500 dark:hover:text-purple-400 transition"
+            aria-label="Go to About page"
           >
             About
           </a>
           <a
             href="#services"
             className="block hover:text-purple-500 dark:hover:text-purple-400 transition"
+            aria-label="Go to Services section"
           >
             Services
           </a>
