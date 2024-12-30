@@ -1,5 +1,5 @@
 {
-  "name": "ai-text-to-image-reactjs-hg",
+  "name": "ai-text-to-image-react-hg",
   "version": "0.1.0",
   "private": true,
   "overrides": {
@@ -31,7 +31,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build"
   },
-  "homepage": "",
   "eslintConfig": {
     "extends": [
       "react-app",
